@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bolånekalkylator</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Bolånekalkylator</h1>
+
+                   <!--Första boxen för lånebeloppet-->
+            
+        <div class="box">
+            <label for="loanAmount">Lånebelopp:</label>
+            <input type="number" id="loanAmount" placeholder="Ange lånebelopp">
+        </div>
+                  <!--Andra boxen för Räntesats-->
+        <div class="box">
+            <label for="interestRate">Räntesats (%):</label>
+            <input type="number" id="interestRate" placeholder="Ange räntesats">
+        </div>
+
+                  <!--Tredje boxen för lånetid-->
+        <div class="box">
+            <label for="loanTerm">Lånetid (år):</label>
+            <input type="number" id="loanTerm" placeholder="Ange lånetid">
+        </div>
+
+        <div class="button-container">
+            <button onclick="calculateLoan()">Beräkna</button>
+        </div>  
+
+           <!--En container som visar resultatet vid beräkning av lånet-->
+        <div id="result-container" class="hidden">
+            <h2>Resultat</h2>
+            <p>Månadskostnad: <span id="monthlyPayment"></span></p>
+            <p>Total räntekostnad: <span id="totalInterest"></span></p>
+            <div id="amortizationSchedule"></div>
+        </div>
+    </div>
+
+    <script src="./labb-ts/js/index.js"></script>
+</body>
+</html>
